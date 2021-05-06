@@ -12,7 +12,7 @@ ctypes.windll.kernel32.SetConsoleTitleW("IGrux")
 def haslo(a):
     b = a.encode()
     c = hashlib.sha256(b)
-    if c.hexdigest() == 'ea3a03b4971eeb62730e1de238225cc4e6145f0eb50ad28b1379f2a2ee71e16e':
+    if c.hexdigest() == 'cea3c47b60ba56576b156f9bd5c87aaa3e319334e8fd0c2ba47c3e1640fcec4a':
         time.sleep(3)
         os.system('cls')
         print(Fore.GREEN + 'DOSTĘP PRZYZNANO')
