@@ -63,8 +63,10 @@ def dostep():
         for f in files:
             print(f)
         file = input('>')
-
-        ofile = open('Notes/' + file, 'r')
+        try:
+            ofile = open('Notes/' + file, 'r')
+        except:
+            print("Plik nie dostępny! sprawdź  nazwę i uprawnienia.")
         print(ofile.read())
         ofile.close()
 
@@ -81,7 +83,10 @@ def dostep():
         for f in files:
             print(f)
         sound = input('>')
-        AudioPlayer('Audio/' + sound).play(block=True)
+        try:
+            AudioPlayer('Audio/' + sound).play(block=True)
+        except:
+            print("Plik nie dostępny! sprawdź  nazwę i uprawnienia.")
         Back()
     elif button == '6':
         os.system('cls')
@@ -117,22 +122,15 @@ def Back():
         Back()
 
 def Animation():
-    Anim_Frame('I', '')
-    Anim_Frame('IG', '')
-    Anim_Frame('IGr', '')
-    Anim_Frame('IGru', '')
-    Anim_Frame('IGrux', '')
-    Anim_Frame('IGrux', 'Loading')
-    Anim_Frame('IGrux', 'Loading.')
-    Anim_Frame('IGrux', 'Loading..')
-    Anim_Frame('IGrux', 'Loading...')
-    Anim_Frame('IGrux', 'Loaded!')
-
-def Anim_Frame(In_Frame1, In_Frame2):
-    os.system('cls')
-    a = Fore.GREEN
-    print(a + f'========================\n{In_Frame1}\n{In_Frame2}\n========================')
-    time.sleep(1)
+    Frame=""
+    for char in 'IGrux\nLoading... ':
+        os.system('cls')
+        if char==" ":
+            Frame='IGrux\nLoaded!'
+        else:
+            Frame+=char
+        print(Fore.GREEN + f'========================\n{Frame}\n========================')
+        time.sleep(1)
 
 #client_id = "834734074014203905"
 #RPC = Presence(client_id)
