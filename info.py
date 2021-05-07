@@ -1,4 +1,15 @@
-sklep = "Produkty w Sklepie u MrEsxej`a:\nGruz\nPiwniczanka\nTynkErs\nTynkośniki\nTynkeppers\nKinder tynkulada\nJajko gruzanko\nTynkiWay\nSpagetti z kabalbali\nTynk-Tak\nLimpton Gruz Tea"
+sklep = '''Produkty w Sklepie u MrEsxej`a:
+Gruz
+Piwniczanka
+TynkErs
+Tynkośniki
+Tynkeppers
+Kinder tynkulada
+Jajko gruzanko
+TynkiWay
+Spagetti z kabalbali
+Tynk-Tak
+Limpton Gruz Tea'''
 autors = '''AUTORZY:
 
 Zaprogramował:
