@@ -12,8 +12,8 @@ ctypes.windll.kernel32.SetConsoleTitleW("IGrux")
 def haslo(a):
     b = a.encode()
     c = hashlib.sha256(b)
-    if c.hexdigest() == 'cea3c47b60ba56576b156f9bd5c87aaa3e319334e8fd0c2ba47c3e1640fcec4a':
-        time.sleep(3)
+    if c.hexdigest() == 'cea3c47b60ba56576b156f9bd5c87aaa3e319334e8fd0c2ba47c3e1640fcec4a': #Koliw
+        time.sleep(3) 
         os.system('cls')
         print(Fore.GREEN + 'DOSTĘP PRZYZNANO')
         dostep()
