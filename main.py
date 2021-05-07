@@ -1,4 +1,5 @@
 import time
+import info
 from colorama import init, Fore
 import webbrowser
 import os
@@ -51,7 +52,7 @@ def dostep():
         Back()
     elif button == '3':
         os.system('cls')
-        print(Fore.CYAN + 'Produkty w Sklepie u MrEsxej`a:\nGruz\nPiwniczanka\nTynkErs\nTynkośniki\nTynkeppers\nKinder tynkulada\nJajko gruzanko\nTynkiWay\nSpagetti z kabalbali\nTynk-Tak\nLimpton Gruz Tea')
+        print(Fore.CYAN + info.sklep)
         Back()
     elif button == '4':
         os.system('cls')
@@ -95,7 +96,7 @@ def dostep():
         Back()
     elif button == '7':
         os.system('cls')
-        print(Fore.CYAN + 'AUTORZY:\n\nZaprogramował:\nMALYMATI2007\n\nUlepszył drobiazgami:\nKoliw\n\nNazwę wymyślił:\nPabloss')
+        print(Fore.CYAN + info.autors)
         Back()
     elif button == '8':
         os.system('cls')
