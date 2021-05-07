@@ -1,4 +1,4 @@
 @echo off
-pip install colorama
-pip install audioplayer
+python -m pip install colorama
+python -m pip install audioplayer
 pause
