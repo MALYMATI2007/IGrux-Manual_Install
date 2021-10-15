@@ -1,4 +1,5 @@
 import time
+import info
 from colorama import init, Fore
 import webbrowser
 import os
@@ -12,7 +13,7 @@ ctypes.windll.kernel32.SetConsoleTitleW("IGrux")
 def haslo(a):
     b = a.encode()
     c = hashlib.sha256(b)
-    if c.hexdigest() == 'cea3c47b60ba56576b156f9bd5c87aaa3e319334e8fd0c2ba47c3e1640fcec4a':
+    if c.hexdigest() == 'cea3c47b60ba56576b156f9bd5c87aaa3e319334e8fd0c2ba47c3e1640fcec4a': #Koliw
         time.sleep(3)
         os.system('cls')
         print(Fore.GREEN + 'DOSTĘP PRZYZNANO')
@@ -51,7 +52,7 @@ def dostep():
         Back()
     elif button == '3':
         os.system('cls')
-        print(Fore.CYAN + 'Produkty w Sklepie u MrEsxej`a:\nGruz\nPiwniczanka\nTynkErs\nTynkośniki\nTynkeppers\nKinder tynkulada\nJajko gruzanko\nTynkiWay\nSpagetti z kabalbali\nTynk-Tak\nLimpton Gruz Tea')
+        print(Fore.CYAN + info.sklep)
         Back()
     elif button == '4':
         os.system('cls')
@@ -63,8 +64,10 @@ def dostep():
         for f in files:
             print(f)
         file = input('>')
-
-        ofile = open('Notes/' + file, 'r')
+        try:
+            ofile = open('Notes/' + file, 'r')
+        except:
+            print("Plik nie dostępny! sprawdź  nazwę i uprawnienia.")
         print(ofile.read())
         ofile.close()
 
@@ -81,7 +84,10 @@ def dostep():
         for f in files:
             print(f)
         sound = input('>')
-        AudioPlayer('Audio/' + sound).play(block=True)
+        try:
+            AudioPlayer('Audio/' + sound).play(block=True)
+        except:
+            print("Plik nie dostępny! sprawdź  nazwę i uprawnienia.")
         Back()
     elif button == '6':
         os.system('cls')
@@ -90,7 +96,7 @@ def dostep():
         Back()
     elif button == '7':
         os.system('cls')
-        print(Fore.CYAN + 'AUTORZY:\n\nZaprogramował:\nMALYMATI2007\n\nUlepszył drobiazgami:\nKoliw\n\nNazwę wymyślił:\nPabloss')
+        print(Fore.CYAN + info.autors)
         Back()
     elif button == '8':
         os.system('cls')
@@ -117,22 +123,15 @@ def Back():
         Back()
 
 def Animation():
-    Anim_Frame('I', '')
-    Anim_Frame('IG', '')
-    Anim_Frame('IGr', '')
-    Anim_Frame('IGru', '')
-    Anim_Frame('IGrux', '')
-    Anim_Frame('IGrux', 'Loading')
-    Anim_Frame('IGrux', 'Loading.')
-    Anim_Frame('IGrux', 'Loading..')
-    Anim_Frame('IGrux', 'Loading...')
-    Anim_Frame('IGrux', 'Loaded!')
-
-def Anim_Frame(In_Frame1, In_Frame2):
-    os.system('cls')
-    a = Fore.GREEN
-    print(a + f'========================\n{In_Frame1}\n{In_Frame2}\n========================')
-    time.sleep(1)
+    Frame=""
+    for char in 'IGrux\nLoading... ':
+        os.system('cls')
+        if char==" ":
+            Frame='IGrux\nLoaded!'
+        else:
+            Frame+=char
+        print(Fore.GREEN + f'========================\n{Frame}\n========================')
+        time.sleep(1)
 
 #client_id = "834734074014203905"
 #RPC = Presence(client_id)
