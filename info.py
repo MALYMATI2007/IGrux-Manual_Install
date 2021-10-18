@@ -10,8 +10,8 @@ TynkiWay
 Spagetti z kabalbali
 Tynk-Tak
 Limpton Gruz Tea'''
-autors = '''AUTORZY:
 
+autors = '''AUTORZY:
 Zaprogramował:
 MALYMATI2007
 
